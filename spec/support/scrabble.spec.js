@@ -14,11 +14,10 @@ describe('Scrabble', function() {
       expect(testScrabble.score('majesty')).toEqual(69);
     });
 
-    // it('should throw error when passed integer', function() {
-    //   expect(testScrabble.score(10)).toThrow(e);
-    // });
+    it('should throw error when passed integer', function() {
+      expect(function(){testScrabble.score(10);}).toThrow(TypeError("I can only scrabble letters"));
+    });
 
   });
-
 
 });
